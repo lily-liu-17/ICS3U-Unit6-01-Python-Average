@@ -10,16 +10,17 @@ import random
 def main():
     # This program finds the averae of 10 random numbers
     number_list = []
+    average = 0
 
     print("Starting ...")
 
     for loop_counter in range(0, 10):
         random_number = random.randint(1, 100)
         number_list.append(random_number)
-
+        average += random_number
         print("The random number is : {0}".format(random_number))
 
-    average = sum(number_list) / len(number_list)
+    average = average / len(number_list)
 
     print("")
     print("The average is {0}".format(average))
